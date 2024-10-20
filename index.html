@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retirement Planning Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen p-4">
+    <header class="w-full py-4 text-center">
+        <nav class="menu">
+            <ul class="main-nav">
+                <li class="logo">
+                    <a href="textor.png">
+                        <img src="images/textor.png" alt="Logo" />
+                    </a>
+                </li>
+                <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                <li class="hideOnMobile"><a href="disclaimer.html">Disclaimer</a></li>
+                <li class="hideOnMobile"><a href="TaC.html">Terms And Conditions</a></li>
+                <li class="hideOnMobile"><a href="Privacy Policy.html">Privacy Policy</a></li>
+        
+                <!-- Hamburger Menu Button -->
+                <li class="menu-button" onclick="showSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        
+            <ul class="sidebar">
+                <li onclick="hideSidebar()">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                            <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="disclaimer.html">Disclaimer</a></li>
+                <li><a href="TaC.html">Terms And Conditions</a></li>
+                <li><a href="Privacy Policy.html">Privacy Policy</a></li>
+            </ul>
+        </nav>
+        
+        <h1 class="text-3xl font-bold">Retirement Planning Assistant</h1>
+    </header>
+
+    <form id="financialForm" class="space-y-4 w-full max-w-md mx-auto">
+        <input type="text" id="name" placeholder="Name" class="w-full p-3 border rounded" required>
+        <input type="number" id="age" placeholder="Age" min="18" max="100" class="w-full p-3 border rounded" required>
+        <select id="currency" class="w-full p-3 border rounded" required>
+            <option value="₹">India (INR)</option>
+            <option value="$">USA (USD)</option>
+            <option value="€">Europe (EUR)</option>
+            <option value="£">UK (GBP)</option>
+            <option value="¥">Japan (JPY)</option>
+        </select>
+        <input type="number" id="retirementAge" placeholder="Retirement Age Goal" min="40" max="100" class="w-full p-3 border rounded" required>
+        <input type="number" id="monthlyExpectancy" placeholder="Monthly Expenses" min="0" class="w-full p-3 border rounded" required>
+        <input type="number" id="currentMonthlyIncome" placeholder="Current Monthly Income" min="0" class="w-full p-3 border rounded" required>
+        <input type="number" id="expectedSalaryGrowth" placeholder="Expected Salary Growth Rate (%)" min="0" max="100" class="w-full p-3 border rounded" required>
+        <input type="number" id="currentInvestments" placeholder="Current Investments" min="0" class="w-full p-3 border rounded" required>
+        <button type="submit" class="w-full p-2 bg-blue-500 text-white rounded hover:bg-blue-600">
+            Let’s Plan My Future!
+        </button>
+    </form>
+
+    <div id="output" class="output-section mt-6 w-full max-w-md mx-auto"></div>
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- footer section -->
+
+    <footer>
+        <div class="footer">
+            <div class="copy">Copyright &copy; 2024-2025 by Textor. All Rights Reserved</div>
+            <div class="mail">
+                <img src="images/email.svg" alt="email" />
+                <span>souviksengupta04@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
